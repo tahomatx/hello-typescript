@@ -1,0 +1,27 @@
+defaultSeverity: error
+extends:
+- tslint:recommended
+jsRules: {}
+rules:
+  no-console:
+    severity: warning
+  no-trailing-whitespace:
+    severity: warning
+    options:
+    - ignore-comments
+    - ignore-jsdoc
+    - ignore-template-strings
+    - ignore-blank-lines
+  no-consecutive-blank-lines:
+    severity: warning
+    options: 2
+  prefer-const:
+    severity: warning
+  no-shadowed-variable:
+    severity: warning
+    # options:
+    # - temporalDeadZone: false
+  semicolon:
+    severity: warning
+
+rulesDirectory: []

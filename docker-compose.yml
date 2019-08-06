@@ -1,0 +1,17 @@
+version: '3.4'
+
+services:
+  app:
+    build: .
+    volumes:
+      - ./data:/data
+  dev:
+    build:
+      context: .
+      target: builder
+    entrypoint: ["tsc"]
+    command: ["--watch"]
+    volumes:
+      - ./data:/data
+      - ./src:/app/src
+    
